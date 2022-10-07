@@ -57,7 +57,10 @@ const pruebas = async()=>{
     
 }
 
-pruebas()
+if(process.env.ID==='test'){
+    pruebas()
+}
+
 /*
 Casos de prueba
 1:Llamada al servidor si funciona

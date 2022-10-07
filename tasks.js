@@ -6,12 +6,12 @@ const movimiento = async(req,res)=>{
     const {codigo,user,p} = req.body
     const pro = ['creacion','ingreso','prepa','salida','entrega']
 
-    //prod
-    //const consulta = await db.query(`Select id,fecha_${pro[p]},fecha_${pro[p-1]} from productos where cod = '${codigo}' `)
-
-    //dev
-    //console.log(`Select id,fecha_${pro[p]},fecha_${pro[p-1]} from productos where cod = '${codigo}' `)
-    const consulta =test.simulados.filter((i)=>i.id===codigo)
+    let consulta
+    if(process.env.ID!=='test'){
+        consulta = await db.query(`Select id,fecha_${pro[p]},fecha_${pro[p-1]} from productos where cod = '${codigo}' `)
+    }else{
+        consulta =test.simulados.filter((i)=>i.id===codigo)
+    }
 
     let disponible = consulta.filter(i=>i[`fecha_${pro[p]}`] === null&&i[`fecha_${pro[p-1]}`] !== null)
     if(consulta.length===0){
