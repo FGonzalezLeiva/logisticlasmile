@@ -1,0 +1,30 @@
+{
+  "name": "logisticlasmile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "nodemon test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FGonzalezLeiva/logisticlasmile.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FGonzalezLeiva/logisticlasmile/issues"
+  },
+  "homepage": "https://github.com/FGonzalezLeiva/logisticlasmile#readme",
+  "dependencies": {
+    "axios": "^1.1.2",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "moment": "^2.29.4",
+    "nodemon": "^2.0.20"
+  }
+}
